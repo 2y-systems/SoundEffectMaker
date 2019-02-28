@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F5F72EB2227A228007E7624 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F72EA2227A228007E7624 /* RecordViewController.swift */; };
+		7F986B4E2227BC020088B482 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F986B4D2227BC020088B482 /* RoundButton.swift */; };
 		7FA9455122276754001F5278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9455022276754001F5278 /* AppDelegate.swift */; };
 		7FA9455322276754001F5278 /* SoundEffectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9455222276754001F5278 /* SoundEffectListViewController.swift */; };
 		7FA9455822276754001F5278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FA9455722276754001F5278 /* Assets.xcassets */; };
@@ -83,6 +84,7 @@
 
 /* Begin PBXFileReference section */
 		7F5F72EA2227A228007E7624 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		7F986B4D2227BC020088B482 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		7FA9454D22276754001F5278 /* SoundEffectMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundEffectMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA9455022276754001F5278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FA9455222276754001F5278 /* SoundEffectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectListViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,14 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		7F986B4A2227BB8D0088B482 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				7F986B4D2227BC020088B482 /* RoundButton.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
 		7FA9454422276754001F5278 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +185,7 @@
 		7FA9454F22276754001F5278 /* SoundEffectMaker */ = {
 			isa = PBXGroup;
 			children = (
+				7F986B4A2227BB8D0088B482 /* Control */,
 				7F5F72E922279DFE007E7624 /* Base */,
 				7FA945AA22277FD5001F5278 /* Const */,
 				7FA945A822277C00001F5278 /* ViewController */,
@@ -440,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F986B4E2227BC020088B482 /* RoundButton.swift in Sources */,
 				7F5F72EB2227A228007E7624 /* RecordViewController.swift in Sources */,
 				7FA9455322276754001F5278 /* SoundEffectListViewController.swift in Sources */,
 				7FA9455122276754001F5278 /* AppDelegate.swift in Sources */,
