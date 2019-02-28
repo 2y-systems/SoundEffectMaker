@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F5F72EB2227A228007E7624 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F72EA2227A228007E7624 /* RecordViewController.swift */; };
 		7FA9455122276754001F5278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9455022276754001F5278 /* AppDelegate.swift */; };
-		7FA9455322276754001F5278 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9455222276754001F5278 /* ViewController.swift */; };
-		7FA9455622276754001F5278 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA9455422276754001F5278 /* Main.storyboard */; };
+		7FA9455322276754001F5278 /* SoundEffectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9455222276754001F5278 /* SoundEffectListViewController.swift */; };
 		7FA9455822276754001F5278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FA9455722276754001F5278 /* Assets.xcassets */; };
-		7FA9455B22276754001F5278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA9455922276754001F5278 /* LaunchScreen.storyboard */; };
 		7FA9456622276755001F5278 /* SoundEffectMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9456522276755001F5278 /* SoundEffectMakerTests.swift */; };
 		7FA9457122276755001F5278 /* SoundEffectMakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9457022276755001F5278 /* SoundEffectMakerUITests.swift */; };
 		7FA9457622276755001F5278 /* SoundEffectMaker WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7FA9457522276755001F5278 /* SoundEffectMaker WatchKit App.app */; };
@@ -23,6 +22,7 @@
 		7FA9458E22276755001F5278 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9458D22276755001F5278 /* NotificationController.swift */; };
 		7FA9459022276755001F5278 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9458F22276755001F5278 /* ComplicationController.swift */; };
 		7FA9459222276755001F5278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FA9459122276755001F5278 /* Assets.xcassets */; };
+		7FA945AE22279863001F5278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA945AD22279863001F5278 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,12 +82,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F5F72EA2227A228007E7624 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		7FA9454D22276754001F5278 /* SoundEffectMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundEffectMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA9455022276754001F5278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7FA9455222276754001F5278 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7FA9455522276754001F5278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7FA9455222276754001F5278 /* SoundEffectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectListViewController.swift; sourceTree = "<group>"; };
 		7FA9455722276754001F5278 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7FA9455A22276754001F5278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FA9455C22276754001F5278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FA9456122276755001F5278 /* SoundEffectMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundEffectMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA9456522276755001F5278 /* SoundEffectMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectMakerTests.swift; sourceTree = "<group>"; };
@@ -107,6 +106,7 @@
 		7FA9459122276755001F5278 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FA9459322276755001F5278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FA9459422276755001F5278 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		7FA945AD22279863001F5278 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +141,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F5F72E922279DFE007E7624 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		7FA9454422276754001F5278 = {
 			isa = PBXGroup;
 			children = (
@@ -168,12 +175,13 @@
 		7FA9454F22276754001F5278 /* SoundEffectMaker */ = {
 			isa = PBXGroup;
 			children = (
+				7F5F72E922279DFE007E7624 /* Base */,
+				7FA945AA22277FD5001F5278 /* Const */,
+				7FA945A822277C00001F5278 /* ViewController */,
 				7FA9455022276754001F5278 /* AppDelegate.swift */,
-				7FA9455222276754001F5278 /* ViewController.swift */,
-				7FA9455422276754001F5278 /* Main.storyboard */,
 				7FA9455722276754001F5278 /* Assets.xcassets */,
-				7FA9455922276754001F5278 /* LaunchScreen.storyboard */,
 				7FA9455C22276754001F5278 /* Info.plist */,
+				7FA945AD22279863001F5278 /* LaunchScreen.storyboard */,
 			);
 			path = SoundEffectMaker;
 			sourceTree = "<group>";
@@ -218,6 +226,22 @@
 				7FA9459422276755001F5278 /* PushNotificationPayload.apns */,
 			);
 			path = "SoundEffectMaker WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		7FA945A822277C00001F5278 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7FA9455222276754001F5278 /* SoundEffectListViewController.swift */,
+				7F5F72EA2227A228007E7624 /* RecordViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7FA945AA22277FD5001F5278 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Const;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,9 +397,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FA9455B22276754001F5278 /* LaunchScreen.storyboard in Resources */,
 				7FA9455822276754001F5278 /* Assets.xcassets in Resources */,
-				7FA9455622276754001F5278 /* Main.storyboard in Resources */,
+				7FA945AE22279863001F5278 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +440,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FA9455322276754001F5278 /* ViewController.swift in Sources */,
+				7F5F72EB2227A228007E7624 /* RecordViewController.swift in Sources */,
+				7FA9455322276754001F5278 /* SoundEffectListViewController.swift in Sources */,
 				7FA9455122276754001F5278 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,22 +499,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7FA9455422276754001F5278 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7FA9455522276754001F5278 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7FA9455922276754001F5278 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7FA9455A22276754001F5278 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		7FA9457A22276755001F5278 /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -685,6 +693,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SoundEffectMaker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.2y-systems.SoundEffectMaker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -699,6 +708,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SoundEffectMaker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.2y-systems.SoundEffectMaker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
