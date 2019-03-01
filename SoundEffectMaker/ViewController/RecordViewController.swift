@@ -144,7 +144,8 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
             
         } else {
             let session = AVAudioSession.sharedInstance()
-            try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try! session.setCategory(AVAudioSessionCategoryPlayAndRecord,
+                                     with: AVAudioSessionCategoryOptions.allowBluetoothA2DP)
             try! session.setActive(true)
             
             let settings = [
