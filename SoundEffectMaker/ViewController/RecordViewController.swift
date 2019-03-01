@@ -11,7 +11,7 @@ import UIKit
 class RecordViewController: UIViewController {
     
     var _label: UILabel!
-    var _button: RoundButton!
+    var _button: UIButton!
     
 
     override func viewDidLoad() {
@@ -36,7 +36,7 @@ class RecordViewController: UIViewController {
         view.addSubview(_label)
         
         // ボタン
-        _button = RoundButton()
+        _button = UIButton()
         _button.setTitle("Back", for: .normal)
         _button.setTitleColor(UIColor.white, for: .normal)
         _button.addTarget(self, action: #selector(tapBack), for: .touchUpInside)

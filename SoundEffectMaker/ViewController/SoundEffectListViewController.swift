@@ -9,10 +9,10 @@
 import UIKit
 
 class SoundEffectListViewController: UIViewController {
-    
-    var _label: UILabel!
-    var _button: RoundButton!
-    
+
+    var _collectionView: UICollectionView!
+    var _collectionLayout: UICollectionViewFlowLayout!
+    var _collectionDataSouruce: SoundEffectListDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,29 +35,41 @@ class SoundEffectListViewController: UIViewController {
     
     
     func setupViews() {
-        // ラベル
-        _label = UILabel()
-        _label.text = "Hello world!!"
-        view.addSubview(_label)
+        _collectionLayout = UICollectionViewFlowLayout()
+        _collectionLayout.minimumLineSpacing = 1
+        _collectionLayout.minimumInteritemSpacing = 1
         
-        // ボタン
-        _button = RoundButton()
-        _button.setTitle("Next", for: .normal)
-        _button.addTarget(self, action: #selector(tapNext), for: .touchUpInside)
-        view.addSubview(_button)
+        // dummy
+        var dummyList = [SoundEffect]()
+        for i in 0..<100 {
+            let dummy = SoundEffect(identifier: "\(i)", title: "\(i)番目", sound: NSData(), backgroundColor: i)
+            dummyList.append(dummy)
+        }
+        _collectionDataSouruce = SoundEffectListDataSource()
+        _collectionDataSouruce.updateItems(items: dummyList)
+        
+        _collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: _collectionLayout)
+        _collectionView.dataSource = _collectionDataSouruce
+        _collectionView.register(SoundEffectListCell.self, forCellWithReuseIdentifier: SoundEffectListCell.cellIdentifier)
+        _collectionView.backgroundColor = UIColor.clear
+        _collectionView.delaysContentTouches = false
+        view.addSubview(_collectionView)
     }
     
     
     func setupLayout() {
-        // ラベル
-        _label.translatesAutoresizingMaskIntoConstraints = false
-        _label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        _label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        
-        // ボタン
-        _button.translatesAutoresizingMaskIntoConstraints = false
-        _button.topAnchor.constraint(equalTo: _label.bottomAnchor, constant: 10).isActive = true
-        _button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true;
+        // コレクションビュー
+        _collectionView.translatesAutoresizingMaskIntoConstraints = false
+        _collectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        _collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        _collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        _collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        let size = view.bounds.width * 0.25
+        _collectionLayout.itemSize = CGSize(width: size - 1, height: size - 1)
     }
     
     
