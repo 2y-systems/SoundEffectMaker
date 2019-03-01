@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F33DF7622290A520070A597 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33DF7522290A520070A597 /* Utility.swift */; };
 		7F5F72EB2227A228007E7624 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F72EA2227A228007E7624 /* RecordViewController.swift */; };
 		7F986B542228BC340088B482 /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F986B532228BC340088B482 /* SoundEffect.swift */; };
 		7F986B562228BE7F0088B482 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F986B552228BE7F0088B482 /* DataManager.swift */; };
@@ -86,6 +87,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F33DF7522290A520070A597 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		7F5F72EA2227A228007E7624 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		7F986B532228BC340088B482 /* SoundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
 		7F986B552228BE7F0088B482 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				7F986B552228BE7F0088B482 /* DataManager.swift */,
+				7F33DF7522290A520070A597 /* Utility.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				7F986B562228BE7F0088B482 /* DataManager.swift in Sources */,
 				7F986B5D2228C7B90088B482 /* SoundEffectListDataSource.swift in Sources */,
 				7F986B5A2228C2EE0088B482 /* SoundEffectListCell.swift in Sources */,
+				7F33DF7622290A520070A597 /* Utility.swift in Sources */,
 				7F986B542228BC340088B482 /* SoundEffect.swift in Sources */,
 				7FA9455322276754001F5278 /* SoundEffectListViewController.swift in Sources */,
 				7FA9455122276754001F5278 /* AppDelegate.swift in Sources */,
@@ -670,6 +674,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZQYAYZMHPA;
 				INFOPLIST_FILE = "SoundEffectMaker WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.2y-systems.SoundEffectMaker.watchkitapp.watchkitextension";
@@ -687,6 +692,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZQYAYZMHPA;
 				INFOPLIST_FILE = "SoundEffectMaker WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.2y-systems.SoundEffectMaker.watchkitapp.watchkitextension";
@@ -705,6 +711,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZQYAYZMHPA;
 				IBSC_MODULE = SoundEffectMaker_WatchKit_Extension;
 				INFOPLIST_FILE = "SoundEffectMaker WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.2y-systems.SoundEffectMaker.watchkitapp";
@@ -723,6 +730,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZQYAYZMHPA;
 				IBSC_MODULE = SoundEffectMaker_WatchKit_Extension;
 				INFOPLIST_FILE = "SoundEffectMaker WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.2y-systems.SoundEffectMaker.watchkitapp";
@@ -740,6 +748,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZQYAYZMHPA;
 				INFOPLIST_FILE = SoundEffectMaker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -755,6 +764,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZQYAYZMHPA;
 				INFOPLIST_FILE = SoundEffectMaker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

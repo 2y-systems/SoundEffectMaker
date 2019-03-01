@@ -24,6 +24,12 @@ class SoundEffectListViewController: UIViewController {
     }
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        _collectionDataSouruce.updateItems(items: DataManager.instance.soundEffects)
+        _collectionView.reloadData()
+    }
+    
+    
     func setupViewController() {
         self.title = "効果音一覧"
         self.view.backgroundColor = UIColor.lightGray
@@ -39,14 +45,16 @@ class SoundEffectListViewController: UIViewController {
         _collectionLayout.minimumLineSpacing = 1
         _collectionLayout.minimumInteritemSpacing = 1
         
+        let manager = DataManager.instance
+        
         // dummy
-        var dummyList = [SoundEffect]()
-        for i in 0..<100 {
-            let dummy = SoundEffect(identifier: "\(i)", title: "\(i)番目", sound: NSData(), backgroundColor: i)
-            dummyList.append(dummy)
+        for i in 0..<10 {
+            let dummy = SoundEffect(identifier: "\(i)")
+            dummy.title = "\(i)番目"
+            manager.soundEffects.append(dummy)
         }
         _collectionDataSouruce = SoundEffectListDataSource()
-        _collectionDataSouruce.updateItems(items: dummyList)
+        _collectionDataSouruce.updateItems(items: manager.soundEffects)
         
         _collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: _collectionLayout)
         _collectionView.dataSource = _collectionDataSouruce

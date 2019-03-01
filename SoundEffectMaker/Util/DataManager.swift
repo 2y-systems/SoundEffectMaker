@@ -10,7 +10,7 @@ import Foundation
 
 class DataManager: NSObject {
     
-    private var soundEffects: [SoundEffect]? = nil
+    public var soundEffects: [SoundEffect] = [SoundEffect]()
     
     static let instance: DataManager = DataManager()
     private override init() {}

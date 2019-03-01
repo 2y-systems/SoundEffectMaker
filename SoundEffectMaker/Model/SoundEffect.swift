@@ -11,15 +11,14 @@ import Foundation
 class SoundEffect {
     
     public var identifier: String
-    public var title: String
-    public var sound: NSData
-    public var backgroundColor: Int
     
-    init(identifier: String, title: String, sound: NSData, backgroundColor: Int) {
+    public var title: String?
+    public var backgroundColor: Int?
+    public var directory: String?
+    public var fileName: String?
+    
+    
+    init(identifier: String) {
         self.identifier = identifier
-        self.title = title
-        self.sound = sound
-        self.backgroundColor = backgroundColor
     }
-    
 }
