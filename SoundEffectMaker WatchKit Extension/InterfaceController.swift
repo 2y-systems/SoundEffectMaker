@@ -8,12 +8,19 @@
 
 import WatchKit
 import Foundation
+import AVFoundation
 
 
 class InterfaceController: WKInterfaceController {
 
+    private var _soundEffect = SoundEffect(identifier: "10")
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        
+        _soundEffect.title = "test"
+        _soundEffect.directory = ""
+        _soundEffect.fileName = Bundle.main.path(forResource: "test/test", ofType: "m4a")
         
         // Configure interface objects here.
     }
@@ -28,4 +35,7 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func tapPlay() {
+        SoundEffectManager.instance.play(soundEffect: _soundEffect)
+    }
 }
