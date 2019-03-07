@@ -16,6 +16,7 @@ class SoundEffect {
     public var backgroundColor: Int?
     public var directory: String?
     public var fileName: String?
+    public var filePath: String?
     
     
     init(identifier: String) {

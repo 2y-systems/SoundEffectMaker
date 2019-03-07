@@ -30,7 +30,7 @@ class SoundEffectManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelega
             stopPlay()
         }
         
-        let url = URL(string: "\(soundEffect.directory!)/\(soundEffect.fileName!)")!
+        let url = URL(string: soundEffect.filePath!)!
         _player = try! AVAudioPlayer(contentsOf: url)
         _player.delegate = self
         _player.play()
@@ -58,7 +58,7 @@ class SoundEffectManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelega
             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
         ]
         
-        let url = URL(string: "\(soundEffect.directory!)/\(soundEffect.fileName!)")!
+        let url = URL(string: soundEffect.filePath!)!
         _recorder = try! AVAudioRecorder(url: url, settings: settings)
         _recorder.delegate = self
         _recorder.record()

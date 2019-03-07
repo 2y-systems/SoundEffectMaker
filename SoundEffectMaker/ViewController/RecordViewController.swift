@@ -28,6 +28,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
         _soundEffect.title = "テスト録音"
         _soundEffect.directory = Utility.getDocumentDirectory().absoluteString
         _soundEffect.fileName = "\(Utility.getNowDateTimeString()).m4a"
+        _soundEffect.filePath = "\(_soundEffect.directory!)/\(_soundEffect.fileName!)"
     }
     
     
