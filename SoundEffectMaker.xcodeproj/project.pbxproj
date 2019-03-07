@@ -28,6 +28,7 @@
 		7FA9459022276755001F5278 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9458F22276755001F5278 /* ComplicationController.swift */; };
 		7FA9459222276755001F5278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FA9459122276755001F5278 /* Assets.xcassets */; };
 		7FA945AE22279863001F5278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA945AD22279863001F5278 /* LaunchScreen.storyboard */; };
+		7FACE1E82230E2B4007137C2 /* SoundEffectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACE1E72230E2B4007137C2 /* SoundEffectManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		7FA9459322276755001F5278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FA9459422276755001F5278 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		7FA945AD22279863001F5278 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7FACE1E72230E2B4007137C2 /* SoundEffectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			children = (
 				7F986B552228BE7F0088B482 /* DataManager.swift */,
 				7F33DF7522290A520070A597 /* Utility.swift */,
+				7FACE1E72230E2B4007137C2 /* SoundEffectManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				7F33DF7622290A520070A597 /* Utility.swift in Sources */,
 				7F986B542228BC340088B482 /* SoundEffect.swift in Sources */,
 				7FA9455322276754001F5278 /* SoundEffectListViewController.swift in Sources */,
+				7FACE1E82230E2B4007137C2 /* SoundEffectManager.swift in Sources */,
 				7FA9455122276754001F5278 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

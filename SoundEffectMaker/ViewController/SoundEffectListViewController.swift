@@ -46,13 +46,6 @@ class SoundEffectListViewController: UIViewController {
         _collectionLayout.minimumInteritemSpacing = 1
         
         let manager = DataManager.instance
-        
-        // dummy
-        for i in 0..<10 {
-            let dummy = SoundEffect(identifier: "\(i)")
-            dummy.title = "\(i)番目"
-            manager.soundEffects.append(dummy)
-        }
         _collectionDataSouruce = SoundEffectListDataSource()
         _collectionDataSouruce.updateItems(items: manager.soundEffects)
         

@@ -12,7 +12,7 @@ class DataManager: NSObject {
     
     public var soundEffects: [SoundEffect] = [SoundEffect]()
     
-    static let instance: DataManager = DataManager()
+    public static let instance: DataManager = DataManager()
     private override init() {}
     
 }

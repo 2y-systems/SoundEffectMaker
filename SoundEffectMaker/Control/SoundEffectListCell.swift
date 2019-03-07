@@ -14,6 +14,7 @@ class SoundEffectListCell: UICollectionViewCell {
     
     private var _button: UIButton!
     private var _label: UILabel!
+    private var _soundEffect: SoundEffect!
     
     
     override init(frame: CGRect) {
@@ -33,6 +34,7 @@ class SoundEffectListCell: UICollectionViewCell {
     
     private func setView() {
         _button = UIButton(type: .system)
+        _button.addTarget(self, action: #selector(tapPlay), for: .touchUpInside)
         self.contentView.addSubview(_button)
         
         _label = UILabel()
@@ -52,7 +54,13 @@ class SoundEffectListCell: UICollectionViewCell {
     
     
     public func updateCell(item: SoundEffect) {
+        _soundEffect = item
         _button.setTitle(item.title, for: .normal)
         _label.text = item.title
+    }
+    
+    
+    @objc private func tapPlay(sender: UIButton) {
+        SoundEffectManager.instance.play(soundEffect: _soundEffect)
     }
 }

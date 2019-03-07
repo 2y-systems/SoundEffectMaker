@@ -15,11 +15,6 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
     private var _play: UIButton!
     private var _record: UIButton!
     
-    private var _recorder: AVAudioRecorder!
-    private var _player: AVAudioPlayer!
-    private var _isRecording = false
-    private var _isPlaying = false
-    
     private var _soundEffect = SoundEffect(identifier: "10")
 
     
@@ -105,63 +100,32 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
     
     
     @objc private func tapPlay(sender: UIButton) {
-        print("click Play!")
+        let seManager = SoundEffectManager.instance
         
-        if _isPlaying {
-            _player.stop()
-            _isPlaying = false
-            
+        if seManager.isPlaying {
+            seManager.stopPlay()
             _label.text = "待機中"
             _play.setTitle("再生", for: .normal)
             _record.isEnabled = true
-            
         } else {
-            let url = URL(string: "\(_soundEffect.directory!)/\(_soundEffect.fileName!)")!
-            _player = try! AVAudioPlayer(contentsOf: url)
-            _player.delegate = self
-            _player.play()
-            
-            _isPlaying = true
-            
+            seManager.play(soundEffect: _soundEffect)
             _label.text = "再生中"
             _play.setTitle("停止", for: .normal)
             _record.isEnabled = false
         }
-        
     }
     
     
     @objc private func tapRecord(sender: UIButton) {
-        print("click Record!")
+        let seManager = SoundEffectManager.instance
         
-        if _isRecording {
-            _recorder.stop()
-            _isRecording = false
-            
+        if seManager.isRecording {
+            seManager.stopRecord()
             _label.text = "待機中"
             _record.setTitle("録音", for: .normal)
             _play.isEnabled = true
-            
         } else {
-            let session = AVAudioSession.sharedInstance()
-            try! session.setCategory(AVAudioSessionCategoryPlayAndRecord,
-                                     with: AVAudioSessionCategoryOptions.allowBluetoothA2DP)
-            try! session.setActive(true)
-            
-            let settings = [
-                AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
-                AVSampleRateKey: 44100,
-                AVNumberOfChannelsKey: 2,
-                AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
-            ]
-            
-            let url = URL(string: "\(_soundEffect.directory!)/\(_soundEffect.fileName!)")!
-            _recorder = try! AVAudioRecorder(url: url, settings: settings)
-            _recorder.delegate = self
-            _recorder.record()
-            
-            _isRecording = true
-            
+            seManager.record(soundEffect: _soundEffect)
             _label.text = "録音中"
             _record.setTitle("停止", for: .normal)
             _play.isEnabled = false
