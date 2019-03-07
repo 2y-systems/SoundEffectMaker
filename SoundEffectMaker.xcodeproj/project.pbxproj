@@ -272,7 +272,7 @@
 		7FA9458822276755001F5278 /* SoundEffectMaker WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				7FACE1EF2231056A007137C2 /* test */,
+				7FACE1F02231058F007137C2 /* test.m4a */,
 				7FA9458922276755001F5278 /* InterfaceController.swift */,
 				7FA9458B22276755001F5278 /* ExtensionDelegate.swift */,
 				7FA9458D22276755001F5278 /* NotificationController.swift */,
@@ -298,14 +298,6 @@
 			children = (
 			);
 			path = Const;
-			sourceTree = "<group>";
-		};
-		7FACE1EF2231056A007137C2 /* test */ = {
-			isa = PBXGroup;
-			children = (
-				7FACE1F02231058F007137C2 /* test.m4a */,
-			);
-			path = test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

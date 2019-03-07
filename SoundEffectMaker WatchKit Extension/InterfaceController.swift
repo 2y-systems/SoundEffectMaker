@@ -20,7 +20,7 @@ class InterfaceController: WKInterfaceController {
         
         _soundEffect.title = "test"
         _soundEffect.directory = ""
-        _soundEffect.fileName = Bundle.main.path(forResource: "test/test", ofType: "m4a")
+        _soundEffect.fileName = Bundle.main.path(forResource: "test", ofType: "m4a")
         
         // Configure interface objects here.
     }
