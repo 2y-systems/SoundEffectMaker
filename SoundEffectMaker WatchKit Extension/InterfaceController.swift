@@ -15,11 +15,18 @@ class InterfaceController: WKInterfaceController {
 
     private var _soundEffect = SoundEffect(identifier: "10")
     
+    @IBOutlet var _label: WKInterfaceLabel!
+    @IBOutlet var _play: WKInterfaceButton!
+    @IBOutlet var _record: WKInterfaceButton!
+    
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         _soundEffect.title = "test"
-        _soundEffect.filePath = Bundle.main.path(forResource: "test", ofType: "m4a")
+        _soundEffect.directory = Utility.getDocumentDirectory().absoluteString
+        _soundEffect.fileName = "\(Utility.getNowDateTimeString()).m4a"
+        _soundEffect.filePath = "\(_soundEffect.directory!)\(_soundEffect.fileName!)"
         
         // Configure interface objects here.
     }
@@ -35,6 +42,46 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func tapPlay() {
-        SoundEffectManager.instance.play(soundEffect: _soundEffect)
+        let seManager = SoundEffectManager.instance
+        
+        if seManager.isPlaying {
+            seManager.stopPlay()
+            
+            DispatchQueue.main.async {
+                self._label.setText("待機中")
+                self._play.setTitle("再生")
+//                self._record.setEnabled(true)
+            }
+        } else {
+            seManager.play(soundEffect: _soundEffect)
+            
+            DispatchQueue.main.async {
+                self._label.setText("再生中")
+                self._play.setTitle("停止")
+//                self._record.setEnabled(false)
+            }
+        }
+    }
+    
+    @IBAction func tapRecord() {
+        let seManager = SoundEffectManager.instance
+        
+        if seManager.isRecording {
+            seManager.stopRecord()
+            
+            DispatchQueue.main.async {
+                self._label.setText("待機中")
+                self._record.setTitle("録音")
+//                self._play.setEnabled(true)
+            }
+        } else {
+            seManager.record(soundEffect: _soundEffect)
+            
+            DispatchQueue.main.async {
+                self._label.setText("録音中")
+                self._record.setTitle("停止")
+//                self._play.setEnabled(false)
+            }
+        }
     }
 }

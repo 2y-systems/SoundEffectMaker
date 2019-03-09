@@ -32,7 +32,6 @@
 		7FACE1E92230F454007137C2 /* SoundEffectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACE1E72230E2B4007137C2 /* SoundEffectManager.swift */; };
 		7FACE1EA22310379007137C2 /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F986B532228BC340088B482 /* SoundEffect.swift */; };
 		7FACE1EB22310412007137C2 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33DF7522290A520070A597 /* Utility.swift */; };
-		7FACE1F12231058F007137C2 /* test.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 7FACE1F02231058F007137C2 /* test.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,7 +122,6 @@
 		7FA9459422276755001F5278 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		7FA945AD22279863001F5278 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FACE1E72230E2B4007137C2 /* SoundEffectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffectManager.swift; sourceTree = "<group>"; };
-		7FACE1F02231058F007137C2 /* test.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,7 +270,6 @@
 		7FA9458822276755001F5278 /* SoundEffectMaker WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				7FACE1F02231058F007137C2 /* test.m4a */,
 				7FA9458922276755001F5278 /* InterfaceController.swift */,
 				7FA9458B22276755001F5278 /* ExtensionDelegate.swift */,
 				7FA9458D22276755001F5278 /* NotificationController.swift */,
@@ -485,7 +482,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FACE1F12231058F007137C2 /* test.m4a in Resources */,
 				7FA9459222276755001F5278 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
