@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -14,23 +14,22 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SoundEffectMaker_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <table alignment="left" id="2BO-bQ-WmD"/>
-                        <label alignment="center" text="待機中" id="PLi-6t-xrH"/>
-                        <button width="1" alignment="left" title="再生" id="Nxk-x8-Y5N">
+                        <label alignment="center" text="待機中" id="sOU-ff-jyE"/>
+                        <button width="1" alignment="left" title="再生" id="n7v-aF-PVY">
                             <connections>
-                                <action selector="tapPlay" destination="AgC-eL-Hgc" id="hUL-Cb-kQH"/>
+                                <action selector="tapPlay" destination="AgC-eL-Hgc" id="Xfv-ve-xOf"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="録音" id="dxW-av-Sn3">
+                        <button width="1" alignment="left" title="録音" id="w5n-DY-Ryn">
                             <connections>
-                                <action selector="tapRecord" destination="AgC-eL-Hgc" id="gUh-sY-wd5"/>
+                                <action selector="tapRecord" destination="AgC-eL-Hgc" id="awG-24-cxs"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
-                        <outlet property="_label" destination="PLi-6t-xrH" id="IJa-ze-31K"/>
-                        <outlet property="_play" destination="Nxk-x8-Y5N" id="PJd-9f-QRV"/>
-                        <outlet property="_record" destination="dxW-av-Sn3" id="DrE-Kd-dfT"/>
+                        <outlet property="_label" destination="sOU-ff-jyE" id="nLd-gf-LNP"/>
+                        <outlet property="_play" destination="n7v-aF-PVY" id="7b6-3P-yoD"/>
+                        <outlet property="_record" destination="w5n-DY-Ryn" id="awT-dV-58Y"/>
                     </connections>
                 </controller>
             </objects>

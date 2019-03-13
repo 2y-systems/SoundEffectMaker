@@ -50,7 +50,7 @@ class InterfaceController: WKInterfaceController {
             DispatchQueue.main.async {
                 self._label.setText("待機中")
                 self._play.setTitle("再生")
-//                self._record.setEnabled(true)
+                self._record.setEnabled(true)
             }
         } else {
             seManager.play(soundEffect: _soundEffect)
@@ -58,7 +58,7 @@ class InterfaceController: WKInterfaceController {
             DispatchQueue.main.async {
                 self._label.setText("再生中")
                 self._play.setTitle("停止")
-//                self._record.setEnabled(false)
+                self._record.setEnabled(false)
             }
         }
     }
@@ -72,7 +72,7 @@ class InterfaceController: WKInterfaceController {
             DispatchQueue.main.async {
                 self._label.setText("待機中")
                 self._record.setTitle("録音")
-//                self._play.setEnabled(true)
+                self._play.setEnabled(true)
             }
         } else {
             seManager.record(soundEffect: _soundEffect)
@@ -80,7 +80,7 @@ class InterfaceController: WKInterfaceController {
             DispatchQueue.main.async {
                 self._label.setText("録音中")
                 self._record.setTitle("停止")
-//                self._play.setEnabled(false)
+                self._play.setEnabled(false)
             }
         }
     }
