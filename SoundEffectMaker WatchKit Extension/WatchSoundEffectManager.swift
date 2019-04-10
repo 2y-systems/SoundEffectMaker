@@ -1,18 +1,18 @@
 //
-//  SoundEffectManager.swift
-//  SoundEffectMaker
+//  WatchSoundEffectManager.swift
+//  SoundEffectMaker WatchKit Extension
 //
-//  Created by user1 on 2019/03/07.
-//  Copyright © 2019年 Yuki Yoshinaga. All rights reserved.
+//  Created by YoshinagaYuuki on 2019/04/10.
+//  Copyright © 2019 Yuki Yoshinaga. All rights reserved.
 //
 
 import Foundation
 import AVFoundation
 
-class SoundEffectManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
+class WatchSoundEffectManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
-    public static let instance: SoundEffectManager = SoundEffectManager()
-
+    public static let instance: WatchSoundEffectManager = WatchSoundEffectManager()
+    
     public private(set) var isRecording = false
     public private(set) var isPlaying = false
     
@@ -24,7 +24,7 @@ class SoundEffectManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelega
     
     
     public func play(soundEffect: SoundEffect) {
-        print("SoundEffectManager: play")
+        print("WatchSoundEffectManager: play")
         
         if isPlaying {
             stopPlay()
@@ -40,7 +40,7 @@ class SoundEffectManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelega
     
     
     public func record(soundEffect: SoundEffect) {
-        print("SoundEffectManger: Record!")
+        print("WatchSoundEffectManger: Record!")
         
         if isRecording {
             stopRecord()
@@ -49,7 +49,6 @@ class SoundEffectManager: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelega
         let session = AVAudioSession.sharedInstance()
         try! session.setCategory(AVAudioSessionCategoryPlayAndRecord,
                                  with: AVAudioSessionCategoryOptions.allowBluetoothA2DP)
-        try! session.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
         try! session.setActive(true)
         
         let settings = [

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19D2F489225DC73600BAD1A0 /* WatchSoundEffectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D2F488225DC73600BAD1A0 /* WatchSoundEffectManager.swift */; };
 		7F33DF7622290A520070A597 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33DF7522290A520070A597 /* Utility.swift */; };
 		7F5F72EB2227A228007E7624 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F72EA2227A228007E7624 /* RecordViewController.swift */; };
 		7F986B542228BC340088B482 /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F986B532228BC340088B482 /* SoundEffect.swift */; };
@@ -29,7 +30,6 @@
 		7FA9459222276755001F5278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FA9459122276755001F5278 /* Assets.xcassets */; };
 		7FA945AE22279863001F5278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA945AD22279863001F5278 /* LaunchScreen.storyboard */; };
 		7FACE1E82230E2B4007137C2 /* SoundEffectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACE1E72230E2B4007137C2 /* SoundEffectManager.swift */; };
-		7FACE1E92230F454007137C2 /* SoundEffectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FACE1E72230E2B4007137C2 /* SoundEffectManager.swift */; };
 		7FACE1EA22310379007137C2 /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F986B532228BC340088B482 /* SoundEffect.swift */; };
 		7FACE1EB22310412007137C2 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F33DF7522290A520070A597 /* Utility.swift */; };
 /* End PBXBuildFile section */
@@ -91,6 +91,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		19D2F488225DC73600BAD1A0 /* WatchSoundEffectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSoundEffectManager.swift; sourceTree = "<group>"; };
 		7F33DF7522290A520070A597 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		7F5F72EA2227A228007E7624 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		7F986B532228BC340088B482 /* SoundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
@@ -277,6 +278,7 @@
 				7FA9459122276755001F5278 /* Assets.xcassets */,
 				7FA9459322276755001F5278 /* Info.plist */,
 				7FA9459422276755001F5278 /* PushNotificationPayload.apns */,
+				19D2F488225DC73600BAD1A0 /* WatchSoundEffectManager.swift */,
 			);
 			path = "SoundEffectMaker WatchKit Extension";
 			sourceTree = "<group>";
@@ -530,8 +532,8 @@
 				7FA9459022276755001F5278 /* ComplicationController.swift in Sources */,
 				7FACE1EA22310379007137C2 /* SoundEffect.swift in Sources */,
 				7FA9458C22276755001F5278 /* ExtensionDelegate.swift in Sources */,
-				7FACE1E92230F454007137C2 /* SoundEffectManager.swift in Sources */,
 				7FA9458A22276755001F5278 /* InterfaceController.swift in Sources */,
+				19D2F489225DC73600BAD1A0 /* WatchSoundEffectManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

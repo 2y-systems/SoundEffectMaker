@@ -42,7 +42,7 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func tapPlay() {
-        let seManager = SoundEffectManager.instance
+        let seManager = WatchSoundEffectManager.instance
         
         if seManager.isPlaying {
             seManager.stopPlay()
@@ -64,7 +64,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func tapRecord() {
-        let seManager = SoundEffectManager.instance
+        let seManager = WatchSoundEffectManager.instance
         
         if seManager.isRecording {
             seManager.stopRecord()
