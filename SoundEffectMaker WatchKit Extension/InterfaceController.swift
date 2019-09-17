@@ -13,7 +13,7 @@ import AVFoundation
 
 class InterfaceController: WKInterfaceController {
 
-    private var _soundEffect = SoundEffect(identifier: "10")
+    private var _soundEffect = SoundEffect()
     
     @IBOutlet var _label: WKInterfaceLabel!
     @IBOutlet var _play: WKInterfaceButton!
@@ -24,9 +24,7 @@ class InterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         
         _soundEffect.title = "test"
-        _soundEffect.directory = Utility.getDocumentDirectory().absoluteString
-        _soundEffect.fileName = "\(Utility.getNowDateTimeString()).m4a"
-        _soundEffect.filePath = "\(_soundEffect.directory!)\(_soundEffect.fileName!)"
+        _soundEffect.filePath = "\(Utility.getDocumentDirectory())\(Utility.getDocumentDirectory()).m4a"
         
         // Configure interface objects here.
     }

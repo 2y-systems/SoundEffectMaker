@@ -11,11 +11,10 @@ import AVFoundation
 
 class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
-    private var _label: UILabel!
-    private var _play: UIButton!
+    private var _status: UILabel!
     private var _record: UIButton!
     
-    private var _soundEffect = SoundEffect(identifier: "10")
+    private var _soundEffect = SoundEffect()
 
     
     override func viewDidLoad() {
@@ -25,10 +24,8 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
         setupViews()
         setupLayout()
         
-        _soundEffect.title = "テスト録音"
-        _soundEffect.directory = Utility.getDocumentDirectory().absoluteString
-        _soundEffect.fileName = "\(Utility.getNowDateTimeString()).m4a"
-        _soundEffect.filePath = "\(_soundEffect.directory!)/\(_soundEffect.fileName!)"
+        _soundEffect.title = "録音"
+        _soundEffect.filePath = "\(Utility.getDocumentDirectory().absoluteString)/\(Utility.getNowDateTimeString()).m4a"
     }
     
     
@@ -45,18 +42,10 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
     
     
     func setupViews() {
-        // ラベル
-        _label = UILabel()
-        _label.text = "Status"
-        view.addSubview(_label)
-        
-        // 再生ボタン
-        _play = UIButton()
-        _play.setTitle("再生", for: .normal)
-        _play.setTitleColor(UIColor.white, for: .normal)
-        _play.addTarget(self, action: #selector(tapPlay), for: .touchUpInside)
-        _play.isEnabled = false
-        view.addSubview(_play)
+        // ステータス
+        _status = UILabel()
+        _status.text = "Status"
+        view.addSubview(_status)
         
         // 録音ボタン
         _record = UIButton()
@@ -68,20 +57,14 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
     
     
     func setupLayout() {
-        // ラベル
-        _label.translatesAutoresizingMaskIntoConstraints = false
-        _label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        _label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        
-        // 再生ボタン
-        _play.translatesAutoresizingMaskIntoConstraints = false
-        _play.topAnchor.constraint(equalTo: _label.bottomAnchor, constant: 10).isActive = true
-        _play.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100).isActive = true
+        // ステータス
+        _status.translatesAutoresizingMaskIntoConstraints = false
+        _status.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        _status.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
         // 録音ボタン
         _record.translatesAutoresizingMaskIntoConstraints = false
-        _record.topAnchor.constraint(equalTo: _label.bottomAnchor, constant: 10).isActive = true
-        _record.leadingAnchor.constraint(equalTo: _play.trailingAnchor, constant: 100).isActive = true
+        _record.topAnchor.constraint(equalTo: _status.bottomAnchor, constant: 10).isActive = true
     }
     
     
@@ -100,36 +83,17 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPl
     }
     
     
-    @objc private func tapPlay(sender: UIButton) {
-        let seManager = SoundEffectManager.instance
-        
-        if seManager.isPlaying {
-            seManager.stopPlay()
-            _label.text = "待機中"
-            _play.setTitle("再生", for: .normal)
-            _record.isEnabled = true
-        } else {
-            seManager.play(soundEffect: _soundEffect)
-            _label.text = "再生中"
-            _play.setTitle("停止", for: .normal)
-            _record.isEnabled = false
-        }
-    }
-    
-    
     @objc private func tapRecord(sender: UIButton) {
         let seManager = SoundEffectManager.instance
         
         if seManager.isRecording {
             seManager.stopRecord()
-            _label.text = "待機中"
+            _status.text = "待機中"
             _record.setTitle("録音", for: .normal)
-            _play.isEnabled = true
         } else {
             seManager.record(soundEffect: _soundEffect)
-            _label.text = "録音中"
+            _status.text = "録音中"
             _record.setTitle("停止", for: .normal)
-            _play.isEnabled = false
         }
     }
     
